@@ -1,0 +1,35 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+    char d[50],stuffd[50],flag[9]="01111110";
+    int i,j,count=0,len;
+
+    printf("Enter data: ");
+    scanf("%s",d);
+    len = strlen(d);
+    strcpy(stuffd,flag);
+    j=8;
+
+    for(i=0;i<len;i++)
+    {
+        stuffd[j++] = d[i];
+        if(d[i] == '1')
+        {
+            count++;
+            if(count==5)
+            {
+                stuffd[j++] = '0';
+                count=0;
+            }
+        }
+        else
+        {
+            count=0;
+        }
+    }
+    stuffd[j]='\0';
+    strcat(stuffd,flag);
+    printf("After stuffing data is %s\n",stuffd);
+}
