@@ -1,0 +1,32 @@
+QUESTION FRAMING OF NETWORKING COMMANDS
+1. 
+Execute a networking command to “change time interval between ping packets” and “to change ping packet size”
+ping -i 3 hostname # Changes interval to 3 seconds between packets
+ping -s 70 hostname # Changes packet size to 70 bytes
+2. 
+Execute a networking command to “make ping send set number of packets” and “make ping print timestamp before each line”
+ping -c 15 hostname # Sends 15 packets then stops
+ping -D hostname # Prints timestamp before each line
+3.
+Execute a networking command to “limit the number of network hops” and “allow super users to send 100 or more packets per second”
+ping -t 10 hostname # Limits network hops to 10
+sudo ping -f hostname # Allows superuser to flood network (100+ packets/sec)
+4.
+Execute a networking command “to find the route to the given destination” and “show IP address do not resolve Host Name”
+traceroute hostname # Find route to destination
+traceroute -n hostname # Show IP addresses without resolving hostnames
+5. 
+Execute a networking command “ to set response time” and “ to find out IP address of Domain”
+traceroute -n -w 1 hostname # Sets 1 second response timeout
+nslookup hostname # Finds IP address of domain
+6. 
+Execute a networking command “to find out specific domain Lookup” and “ to query Name Server record”
+nslookup domain # Find specific domain lookup
+nslookup-query=ns domain # Query nameserver records
+7. 
+Execute a networking command “ to list all active listening TCP and UDP ports”
+netstat -l # Lists all active listening ports
+8. 
+Execute a networking command “to display ARP entries for a particular addressand for an Interface”
+arp -a ipaddress # Display ARP entries for specific address
+arp -i interface # Display ARP entries for specific interface
