@@ -1,23 +1,31 @@
 #include<stdio.h>
-void main() {
-int ws,nf,c=0,ack;
-printf(“Enter window size: “);
-scanf(“%d”,&ws);
-printf(“Enter number of frames: “);
-scanf(“%d”,&nf);
-while(1) {
-for(int i=0;i<ws;i++)
+#include<string.h>
+void main()
 {
-Printf(“Frame %d is transmitted\n”,c);
-if(c==nf-1)
-     break;
-c+=1;
+  char s1[10];
+  printf("Enter a string: ");
+  scanf("%d",&s1);
+  int nf,c1=0,n=strlen(s1),count[50];
+  printf("Enter no of frames: ");
+  scanf("%d",&nf);
+  for(int i=0;i<nf;i++)
+{
+   printf("Enter frame %d count: ",i+1);
+  scanf("%d",&count[i);
+  if(c1<n)
+  {
+     printf("Content of frame %d:",i+1);
+     for(int j=c1;j<count[i]-c1;j++)
+     {
+        printf("%c",s1[j]);
+     }
+c1+=count[i];
+print("\n");
 }
-Printf(“Enter last acknowledgment: “);
-Scanf(“%d”,&ack);
-if(ack==c)
-     Break;
-else
-    c=ack+1;
+else{
+printf("All elements of string are completed\n");
 }
 }
+
+   
+  
